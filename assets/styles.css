@@ -706,6 +706,51 @@ textarea {
   }
 }
 
+/* Privacy notice */
+.form-privacy-notice {
+  font-size: 0.8125rem;
+  color: #a8a29e;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.form-privacy-notice a {
+  color: #78716c;
+  text-decoration: underline;
+}
+
+.form-privacy-notice a:hover {
+  color: #57534e;
+}
+
+/* Privacy page */
+.privacy-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.privacy-content h2 {
+  font-size: 1.125rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #44403c;
+}
+
+.privacy-content p {
+  margin-bottom: 1rem;
+  color: #57534e;
+}
+
+.privacy-content ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: #57534e;
+}
+
+.privacy-content li {
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 480px) {
   .page-container {
     padding: 1rem;
