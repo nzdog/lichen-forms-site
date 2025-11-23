@@ -346,9 +346,10 @@ textarea {
   gap: 1rem;
 }
 
-.footer-row .footer-contact,
-.footer-row .footer-privacy {
-  margin-top: 0;
+.footer-row p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .footer-contact {
