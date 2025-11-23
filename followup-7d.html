@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-Day Check-In — Lichen Protocol</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <span class="site-header-logo">lichen</span>
+  </header>
+  <main class="page-container form-page">
+    <div class="content-wrapper">
+      <header class="page-header" style="text-align: center;">
+        <img src="assets/logoNoText.png" alt="Lichen Protocol logo" class="logo-rotate">
+        <h1 class="page-title">7-day check-in — lichen protocol</h1>
+        <p class="field-description">A reflection on the week since your session to track how the field is settling.</p>
+      </header>
+
+      <div class="form-container">
+        <form id="followup-7d-form" name="followup-7d-form" method="POST" action="thankyou-7d.html">
+
+          <div class="question-card">
+            <label for="q1" class="question-label">1. what has held or continued to shift over the past week?</label>
+            <p class="question-context">This reveals which parts of your recent sessions have created durable movement. After a week — regardless of how many protocols you've walked — the noise settles and what remains is genuine integration, not just immediate reaction.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"The calm hasn't faded. Decisions are still slower and more intentional."</li>
+                <li>"The clarity about my next step has stayed consistent all week."</li>
+                <li>"The sense of pressure is still lower — not gone, but noticeably lighter."</li>
+                <li>"My focus has remained sharper; I'm not getting derailed as easily."</li>
+              </ul>
+            </details>
+            <textarea id="q1" name="q1" rows="3" autofocus></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q2" class="question-label">2. what has faded, returned, or stayed the same over the past week?</label>
+            <p class="question-context">This shows where older patterns still have gravitational pull, and where environmental or internal pressures remain unchanged. It helps the system see which structures reassert themselves and which are ready to move.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Some of the old urgency crept back mid-week."</li>
+                <li>"The team dynamic still feels chaotic — no change yet."</li>
+                <li>"The insight faded after two days; I slipped back into autopilot."</li>
+                <li>"Nothing external changed this week."</li>
+              </ul>
+            </details>
+            <textarea id="q2" name="q2" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q3" class="question-label">3. what feels clearer or more possible now than it did a week ago?</label>
+            <p class="question-context">This indicates how your internal landscape has reorganised across the week. Clarity and possibility are reliable markers of deepening coherence, especially when multiple sessions contribute to cumulative movement.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Delegating feels genuinely possible now."</li>
+                <li>"I can see the real issue behind the surface confusion."</li>
+                <li>"I feel permission to say no to things that aren't mine."</li>
+                <li>"The direction for the next month feels obvious instead of foggy."</li>
+              </ul>
+            </details>
+            <textarea id="q3" name="q3" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q4" class="question-label">4. has anything changed in how your environment is affecting you over the past week?</label>
+            <p class="question-context">This measures field-level movement — how you relate to the pressures, signals, and demands of your environment. Even if nothing external changes, your relationship to it can shift substantially across a week.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Investor pressure feels less personal — more like neutral information."</li>
+                <li>"I'm less reactive to my inbox; I don't feel pulled around by it."</li>
+                <li>"The team's urgency doesn't hijack me anymore."</li>
+                <li>"Nothing external has shifted, but I feel more grounded inside it."</li>
+              </ul>
+            </details>
+            <textarea id="q4" name="q4" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q5" class="question-label">5. optional — have you noticed any somatic patterns over the past week?</label>
+            <p class="question-context">Somatic stability is one of the clearest indicators of real coherence. Across a week, your body reveals whether shifts are integrating, holding steady, or returning to old patterns.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"My shoulders have stayed more relaxed all week."</li>
+                <li>"Tightness comes back when talking to a particular stakeholder."</li>
+                <li>"My breathing has been slower and more even."</li>
+                <li>"No major changes, but I'm more conscious of when my chest tightens."</li>
+              </ul>
+            </details>
+            <textarea id="q5" name="q5" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">submit 7-day check-in</button>
+        </form>
+      </div>
+
+      <a href="index.html" class="back-link">← back to forms portal</a>
+
+      <footer class="page-footer">
+        <p class="footer-contact"><a href="mailto:nigel@lichenprotocol.com">nigel@lichenprotocol.com</a></p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.question-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Don't focus if clicking inside an already-focused card
+        if (card.contains(document.activeElement)) return;
+        const input = card.querySelector('input, textarea');
+        if (input && input.type !== 'radio') input.focus();
+      });
+    });
+  </script>
+</body>
+</html>

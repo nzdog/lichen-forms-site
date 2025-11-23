@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24-Hour Check-In — Lichen Protocol</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <span class="site-header-logo">lichen</span>
+  </header>
+  <main class="page-container form-page">
+    <div class="content-wrapper">
+      <header class="page-header" style="text-align: center;">
+        <img src="assets/logoNoText.png" alt="Lichen Protocol logo" class="logo-rotate">
+        <h1 class="page-title">24-hour check-in — lichen protocol</h1>
+        <p class="field-description">A quick reflection after your session to help the system understand how the field is moving.</p>
+      </header>
+
+      <div class="form-container">
+        <form id="followup-24h-form" name="followup-24h-form" method="POST" action="thankyou-24h.html">
+
+          <div class="question-card">
+            <label for="q1" class="question-label">1. in a few words, how would you describe what the experience felt like?</label>
+            <p class="question-context">This captures the energetic texture of the field — how the system was received emotionally and somatically, not just intellectually.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Grounding — like things finally made sense again."</li>
+                <li>"Unexpectedly emotional; it hit something deeper than I thought."</li>
+                <li>"Calm and clear, as if fog lifted."</li>
+              </ul>
+            </details>
+            <textarea id="q1" name="q1" rows="3" autofocus></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q2" class="question-label">2. what, if anything, surprised you or stood out most strongly?</label>
+            <p class="question-context">Surprise indicates points where the field moved — where habitual patterns loosened and new awareness emerged.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"How quickly we got to something I hadn't named before."</li>
+                <li>"That it felt more like reflection than coaching."</li>
+                <li>"The accuracy of what surfaced from such simple questions."</li>
+              </ul>
+            </details>
+            <textarea id="q2" name="q2" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label class="question-label">3. after the session, did anything change in how you see your work or situation?</label>
+            <p class="question-context">This gives a measurable indicator of field movement — how much perception reorganized during the walk.</p>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="q3" value="no-change">
+                <span>no change</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="q3" value="small-clarity">
+                <span>small clarity</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="q3" value="noticeable-reframing">
+                <span>noticeable reframing</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="q3" value="major-shift">
+                <span>major shift in perspective</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question-card">
+            <label for="q4" class="question-label">4. if something did change, what was it?</label>
+            <p class="question-context">Naming the nature of the shift reveals where the system's effect is landing — insight, relief, direction, or release.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"I saw that control was costing me clarity."</li>
+                <li>"I realised I've been working from other people's priorities."</li>
+                <li>"I stopped feeling stuck — there's actually a next step now."</li>
+              </ul>
+            </details>
+            <textarea id="q4" name="q4" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q5" class="question-label">5. how would you describe your sense of agency (ability to choose or act) now compared with before?</label>
+            <p class="question-context">Agency is the clearest indicator of coherence returning; an increased sense of choice means the field has stabilised.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"I feel more in charge of my creative direction."</li>
+                <li>"Still uncertain, but I'm less paralysed — I can see options."</li>
+                <li>"I realised I can lead the process rather than wait for others."</li>
+              </ul>
+            </details>
+            <textarea id="q5" name="q5" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q6" class="question-label">6. what feels easier, clearer, or more possible since the session?</label>
+            <p class="question-context">This measures integration — whether the insight has translated into new lightness or forward motion.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Making decisions without overthinking."</li>
+                <li>"Letting clients set their pace without losing mine."</li>
+                <li>"Starting my own project finally feels doable."</li>
+              </ul>
+            </details>
+            <textarea id="q6" name="q6" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q7" class="question-label">7. optional — did anything shift in your body during or after the session?</label>
+            <p class="question-context">This gives the system direct somatic signal — changes in tension, energy, calm, or agitation. It shows whether the system is impacting how the body holds the work, not just how the mind thinks about it.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"My chest loosened; the tightness I came in with eased a lot."</li>
+                <li>"I noticed my breathing slowed down and felt heavier in a good way — more grounded."</li>
+                <li>"My jaw was clenched at the start and relaxed by the end."</li>
+                <li>"No big shift, but I felt a slight softening in my shoulders."</li>
+              </ul>
+            </details>
+            <textarea id="q7" name="q7" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q8" class="question-label">8. optional — has anything changed in how your environment is affecting you since the session?</label>
+            <p class="question-context">This surfaces early field-level movement: whether the same environment now lands differently on you — less pressure, more coherence, clearer boundaries, or a different relationship to the same constraints.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"The investor pressure is still there, but it feels less like a demand and more like a choice."</li>
+                <li>"My inbox hasn't changed, but I don't feel as dragged around by it."</li>
+                <li>"The team's energy feels the same, but I can see more clearly what's mine and what isn't."</li>
+                <li>"No external change yet, but I'm noticing the old triggers don't bite as hard."</li>
+              </ul>
+            </details>
+            <textarea id="q8" name="q8" rows="3"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q9" class="question-label">9. optional — if you told someone else about this experience, what would you say it is or does?</label>
+            <p class="question-context">This reveals the natural language people use to describe the system — useful for communication and resonance mapping.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"It's like guided clarity — not therapy, not strategy, but something in between."</li>
+                <li>"A mirror that helps you see your own operating system."</li>
+                <li>"A reset for how you relate to your work."</li>
+              </ul>
+            </details>
+            <textarea id="q9" name="q9" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">submit 24-hour check-in</button>
+        </form>
+      </div>
+
+      <a href="index.html" class="back-link">← back to forms portal</a>
+
+      <footer class="page-footer">
+        <p class="footer-contact"><a href="mailto:nigel@lichenprotocol.com">nigel@lichenprotocol.com</a></p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.question-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Don't focus if clicking inside an already-focused card
+        if (card.contains(document.activeElement)) return;
+        const input = card.querySelector('input, textarea');
+        if (input && input.type !== 'radio') input.focus();
+      });
+    });
+  </script>
+</body>
+</html>

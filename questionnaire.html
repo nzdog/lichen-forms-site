@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lichen Protocol — Intake Questionnaire</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <span class="site-header-logo">lichen</span>
+  </header>
+  <main class="page-container form-page">
+    <div class="content-wrapper">
+      <header class="page-header" style="text-align: center;">
+        <img src="assets/logoNoText.png" alt="Lichen Protocol logo" class="logo-rotate">
+        <h1 class="page-title">Lichen Protocol — Intake Questionnaire</h1>
+        <p class="field-description">A field is the environment you're building inside — the expectations, pressures, norms, and invisible forces that shape how you work and make decisions. Every founder operates inside a field, whether they realise it or not.</p>
+      </header>
+
+      <div class="form-container">
+        <form id="field-questionnaire" name="field-questionnaire" method="POST" action="thankyou-intake.html">
+          <div class="question-card question-card-compact">
+            <div class="form-field">
+              <label for="full-name" class="field-label">Full name</label>
+              <input type="text" id="full-name" name="full-name" autofocus>
+            </div>
+
+            <div class="form-field">
+              <label for="email" class="field-label">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-field">
+              <label for="startup-name" class="field-label">Startup / project name</label>
+              <input type="text" id="startup-name" name="startup-name">
+            </div>
+
+            <div class="form-field">
+              <label for="role" class="field-label">Role</label>
+              <input type="text" id="role" name="role">
+            </div>
+          </div>
+
+          <div class="question-card">
+            <label for="q1" class="question-label">1. What feels "normal" in your field, or the environment you're operating in, right now?</label>
+            <p class="question-context">This surfaces the baseline you're operating inside — what you've come to accept as "just how things are." It helps the system understand the default conditions shaping you before any shift happens.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Constant context switching, lots of pings, and never quite finishing anything."</li>
+                <li>"Back-to-back calls, always a bit behind, but on the surface everything looks fine."</li>
+                <li>"Mostly solo deep focus, but with a constant low-level worry about sustainability."</li>
+              </ul>
+            </details>
+            <textarea id="q1" name="q1" rows="4"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q2" class="question-label">2. What does your field reward you for?</label>
+            <p class="question-context">This reveals the behaviours your field currently reinforces — what gets praise, traction, or survival. It shows what you're being conditioned to optimise for.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Shipping fast even if quality drops."</li>
+                <li>"Being available 24/7 and responding instantly."</li>
+                <li>"Keeping investors calm instead of telling the truth."</li>
+                <li>"Cleaning up other people's messes instead of building what actually matters to me."</li>
+              </ul>
+            </details>
+            <textarea id="q2" name="q2" rows="4"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q3" class="question-label">3. How does your field hold you when things get hard?</label>
+            <p class="question-context">This shows how your field responds under stress — whether it supports you, amplifies pressure, or leaves you alone. It reveals the resilience or brittleness of your current conditions.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"I isolate and push harder; no one really knows when I'm struggling."</li>
+                <li>"The team is supportive, but I still feel like I can't show doubt."</li>
+                <li>"Everyone panics and blames each other — full firefighting mode."</li>
+                <li>"We pause, talk openly, and re-scope together. Not perfect, but I don't feel alone."</li>
+              </ul>
+            </details>
+            <textarea id="q3" name="q3" rows="4"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q4" class="question-label">4. What's the quality of your decisions in this field?</label>
+            <p class="question-context">This highlights how clearly you're thinking inside your current conditions — whether decisions come from coherence or from pressure, fear, or habit. It helps the system gauge your internal signal-to-noise ratio.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Reactive; mostly putting out fires and saying yes to whatever is loudest."</li>
+                <li>"Strategic in theory, but I override my instincts to keep people happy."</li>
+                <li>"Good when I give myself time — I just rarely take that time."</li>
+                <li>"Sharp on product decisions, avoidant on people decisions."</li>
+              </ul>
+            </details>
+            <textarea id="q4" name="q4" rows="4"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q5" class="question-label">5. What is the cost of staying in this field?</label>
+            <p class="question-context">This draws out the real price you're paying — energetically, relationally, financially — for keeping conditions as they are. It shows where the trajectory is unsustainable.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"My health is taking the hit — poor sleep, constant anxiety."</li>
+                <li>"My partner is losing patience; I'm never fully present."</li>
+                <li>"I'm burning savings with no clear sustainability path."</li>
+                <li>"I'm losing connection to why I started this."</li>
+              </ul>
+            </details>
+            <textarea id="q5" name="q5" rows="4"></textarea>
+          </div>
+
+          <div class="question-card">
+            <label for="q6" class="question-label">6. What kind of field would you want to be in?</label>
+            <p class="question-context">This points toward the conditions under which you could actually thrive. It gives the system direction, not just a list of stresses.</p>
+            <details class="examples-accordion">
+              <summary>Examples</summary>
+              <ul>
+                <li>"Calm, focused conditions where I can think clearly and produce meaningful work."</li>
+                <li>"An field where honesty, nuance, and long-term thinking are normal."</li>
+                <li>"A rhythm where I can be present with family and still build ambitiously."</li>
+                <li>"One that rewards craftsmanship, coherence, and alignment — not nonstop pressure."</li>
+              </ul>
+            </details>
+            <textarea id="q6" name="q6" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Submit Questionnaire</button>
+        </form>
+      </div>
+
+      <a href="index.html" class="back-link">&larr; Back to Forms Portal</a>
+
+      <footer class="page-footer">
+        <p class="footer-contact"><a href="mailto:nigel@lichenprotocol.com">nigel@lichenprotocol.com</a></p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.question-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Don't focus if clicking inside an already-focused card
+        if (card.contains(document.activeElement)) return;
+        const input = card.querySelector('input, textarea');
+        if (input) input.focus();
+      });
+    });
+  </script>
+</body>
+</html>
