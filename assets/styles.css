@@ -346,6 +346,11 @@ textarea {
   gap: 1rem;
 }
 
+.footer-row .footer-contact,
+.footer-row .footer-privacy {
+  margin-top: 0;
+}
+
 .footer-contact {
   font-size: 0.75rem;
   color: #a8a29e;
