@@ -339,6 +339,13 @@ textarea {
   color: #a8a29e;
 }
 
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
 .footer-contact {
   font-size: 0.75rem;
   color: #a8a29e;
@@ -352,6 +359,22 @@ textarea {
 }
 
 .footer-contact a:hover {
+  color: #78716c;
+}
+
+.footer-privacy {
+  font-size: 0.75rem;
+  color: #a8a29e;
+  margin-top: 0.5rem;
+}
+
+.footer-privacy a {
+  color: #a8a29e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-privacy a:hover {
   color: #78716c;
 }
 
