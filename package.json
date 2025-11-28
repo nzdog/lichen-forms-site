@@ -1,0 +1,9 @@
+{
+  "name": "lichen-forms-site",
+  "version": "1.0.0",
+  "description": "Lichen Protocol forms with Notion integration",
+  "type": "module",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15"
+  }
+}
