@@ -80,7 +80,10 @@ function createResponseBlocks(formType, responses) {
         blocks.push({
           paragraph: {
             rich_text: [
-              { text: { content: `**${questions[i]}**\n`, bold: true } },
+              {
+                text: { content: `${questions[i]}\n` },
+                annotations: { bold: true }
+              },
               { text: { content: responses[responseKey] } }
             ]
           }
@@ -109,7 +112,10 @@ function createResponseBlocks(formType, responses) {
         blocks.push({
           paragraph: {
             rich_text: [
-              { text: { content: `**${questions[i]}**\n`, bold: true } },
+              {
+                text: { content: `${questions[i]}\n` },
+                annotations: { bold: true }
+              },
               { text: { content: responses[responseKey] } }
             ]
           }
