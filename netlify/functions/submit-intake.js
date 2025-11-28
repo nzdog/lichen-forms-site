@@ -91,7 +91,7 @@ export const handler = async (event) => {
           name: 'Website'
         }
       },
-      'Q1': {
+      'Q1 - What feels normal': {
         rich_text: [
           {
             text: {
@@ -100,7 +100,7 @@ export const handler = async (event) => {
           }
         ]
       },
-      'Q2': {
+      'Q2 - What does field reward': {
         rich_text: [
           {
             text: {
@@ -109,7 +109,7 @@ export const handler = async (event) => {
           }
         ]
       },
-      'Q3': {
+      'Q3 - How field holds during hard times': {
         rich_text: [
           {
             text: {
@@ -118,7 +118,7 @@ export const handler = async (event) => {
           }
         ]
       },
-      'Q4': {
+      'Q4 - Quality of decisions': {
         rich_text: [
           {
             text: {
@@ -127,7 +127,7 @@ export const handler = async (event) => {
           }
         ]
       },
-      'Q5': {
+      'Q5 - Cost of staying': {
         rich_text: [
           {
             text: {
@@ -136,7 +136,7 @@ export const handler = async (event) => {
           }
         ]
       },
-      'Q6': {
+      'Q6 - Desired field': {
         rich_text: [
           {
             text: {
