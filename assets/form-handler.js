@@ -18,6 +18,13 @@ function setupFormHandler(formId, endpoint, formType = null) {
     // Add form type for follow-up forms
     if (formType) {
       data.formType = formType;
+
+      // Check for session ID in URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const sessionId = urlParams.get('session');
+      if (sessionId) {
+        data.sessionId = sessionId;
+      }
     }
 
     // Show loading state

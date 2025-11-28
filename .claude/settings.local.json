@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Implement Notion integration for forms\n\n- Add Netlify serverless functions for form submission\n- Implement intake form handler with duplicate checking by email\n- Implement follow-up form handler using Notion Blocks API\n- Add client-side form submission JavaScript\n- Configure Netlify Functions and install Notion SDK\n- Update HTML forms to use new serverless endpoints\n- Add comprehensive setup documentation\n\nTechnical details:\n- Intake form creates/updates founder records in Notion database\n- Follow-up forms append responses to session page content blocks\n- Auto-creates Follow-Up section structure if missing\n- Handles pagination for large session pages\n- Stores Q1-Q6 field theory questions as database properties\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

@@ -151,7 +151,7 @@ export const handler = async (event) => {
   try {
     // Parse form data
     const formData = JSON.parse(event.body);
-    const { email, formType, ...responses } = formData;
+    const { email, formType, sessionId, ...responses } = formData;
 
     // Validate inputs
     if (!email) {
@@ -191,26 +191,33 @@ export const handler = async (event) => {
     const founderPage = foundersResponse.results[0];
     const founderPageId = founderPage.id;
 
-    // Get child pages (sessions) of the founder page
-    const childPagesResponse = await notion.blocks.children.list({
-      block_id: founderPageId,
-      page_size: 100
-    });
+    let latestSessionId;
 
-    // Filter for child pages only (type === 'child_page')
-    const sessionPages = childPagesResponse.results.filter(block => block.type === 'child_page');
+    // If sessionId is provided in the request, use it directly
+    if (sessionId) {
+      latestSessionId = sessionId;
+    } else {
+      // Otherwise, find the most recent child page (fallback to current behavior)
+      const childPagesResponse = await notion.blocks.children.list({
+        block_id: founderPageId,
+        page_size: 100
+      });
 
-    if (sessionPages.length === 0) {
-      return {
-        statusCode: 404,
-        body: JSON.stringify({
-          error: 'No sessions found for this founder. Please create a session page as a child page under the founder in Notion.'
-        })
-      };
+      // Filter for child pages only (type === 'child_page')
+      const sessionPages = childPagesResponse.results.filter(block => block.type === 'child_page');
+
+      if (sessionPages.length === 0) {
+        return {
+          statusCode: 404,
+          body: JSON.stringify({
+            error: 'No sessions found for this founder. Please create a session page as a child page under the founder in Notion.'
+          })
+        };
+      }
+
+      // Get the most recent session (last child page)
+      latestSessionId = sessionPages[sessionPages.length - 1].id;
     }
-
-    // Get the most recent session (last child page)
-    const latestSessionId = sessionPages[sessionPages.length - 1].id;
 
     // Get all blocks from the session page
     const blocks = await getAllBlocks(latestSessionId);
