@@ -257,10 +257,12 @@ export const handler = async (event) => {
     // Create formatted response blocks
     const responseBlocks = createResponseBlocks(formType, responses);
 
-    // Append the responses under the update heading
+    // Append the responses to the session page, after the update heading
+    // We need to insert after the heading, not as children of the heading
     await notion.blocks.children.append({
-      block_id: updateHeading.id,
-      children: responseBlocks
+      block_id: latestSessionId,
+      children: responseBlocks,
+      after: updateHeading.id
     });
 
     return {
