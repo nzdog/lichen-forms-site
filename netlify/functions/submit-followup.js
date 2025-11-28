@@ -183,21 +183,28 @@ export const handler = async (event) => {
     }
 
     const founderPage = foundersResponse.results[0];
+    const founderPageId = founderPage.id;
 
-    // Get the Sessions relation property
-    const sessionsRelation = founderPage.properties.Sessions?.relation || [];
+    // Get child pages (sessions) of the founder page
+    const childPagesResponse = await notion.blocks.children.list({
+      block_id: founderPageId,
+      page_size: 100
+    });
 
-    if (sessionsRelation.length === 0) {
+    // Filter for child pages only (type === 'child_page')
+    const sessionPages = childPagesResponse.results.filter(block => block.type === 'child_page');
+
+    if (sessionPages.length === 0) {
       return {
         statusCode: 404,
         body: JSON.stringify({
-          error: 'No sessions found for this founder. Please contact support.'
+          error: 'No sessions found for this founder. Please create a session page as a child page under the founder in Notion.'
         })
       };
     }
 
-    // Get the most recent session (last item in the relation array)
-    const latestSessionId = sessionsRelation[sessionsRelation.length - 1].id;
+    // Get the most recent session (last child page)
+    const latestSessionId = sessionPages[sessionPages.length - 1].id;
 
     // Get all blocks from the session page
     const blocks = await getAllBlocks(latestSessionId);
